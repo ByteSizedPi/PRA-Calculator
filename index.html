@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>PRA calculator</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td><h3>Load Time</h3></td>
+        <td><h3>Initial Pages</h3></td>
+        <td><input type="text" class="page-input" id="p-0" /></td>
+        <td><input type="text" class="page-input" id="p-1" /></td>
+        <td><input type="text" class="page-input" id="p-2" /></td>
+        <td><input type="text" class="page-input" id="p-3" /></td>
+        <td><input type="text" class="page-input" id="p-4" /></td>
+        <td><input type="text" class="page-input" id="p-5" /></td>
+        <td><input type="text" class="page-input" id="p-6" /></td>
+        <td><input type="text" class="page-input" id="p-7" /></td>
+        <td><input type="text" class="page-input" id="p-8" /></td>
+        <td><input type="text" class="page-input" id="p-9" /></td>
+        <td><input type="text" class="page-input" id="p-10" /></td>
+        <td><input type="text" class="page-input" id="p-11" /></td>
+        <td><input type="text" class="page-input" id="p-12" /></td>
+        <td><input type="text" class="page-input" id="p-13" /></td>
+        <td><input type="text" class="page-input" id="p-14" /></td>
+        <td><input type="text" class="page-input" id="p-15" /></td>
+        <td><input type="text" class="page-input" id="p-16" /></td>
+        <td><input type="text" class="page-input" id="p-17" /></td>
+        <td><input type="text" class="page-input" id="p-18" /></td>
+        <td><input type="text" class="page-input" id="p-19" /></td>
+        <td><button onclick="clock()">Clock</button></td>
+      </tr>
+      <tr>
+        <td><input type="text" id="l1" value="28" /></td>
+        <td><input type="text" id="p1" value="3" /></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><button onclick="FIFO()">FIFO</button></td>
+      </tr>
+      <tr>
+        <td><input type="text" id="l2" value="2" /></td>
+        <td><input type="text" id="p2" value="2" /></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><button onclick="LRU()">LRU</button></td>
+      </tr>
+      <tr>
+        <td><input type="text" id="l3" value="29" /></td>
+        <td><input type="text" id="p3" value="9" /></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><button onclick="optimal()">Optimal</button></td>
+      </tr>
+      <tr>
+        <td><input type="text" id="l4" value="3" /></td>
+        <td><input type="text" id="p4" value="8" /></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><div class="page"></div></td>
+        <td><button onclick="secondChance()">Second Chance</button></td>
+      </tr>
+    </table>
+  </body>
+  <style>
+    * {
+      font-family: "Montserrat", sans-serif;
+    }
+
+    h3 {
+      font-weight: 600;
+      margin: 0.5rem 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    td,
+    th {
+      padding: 0;
+      margin: 0;
+      line-height: 0.9rem;
+    }
+
+    table {
+      background-color: #ccc;
+      border-radius: 5px;
+      padding: 0.1rem;
+    }
+
+    input {
+      border: none;
+      height: 1rem;
+      padding: 0.2rem;
+      margin: 0.1rem;
+      background-color: white;
+      outline: none;
+      border-radius: 3px;
+    }
+
+    .page-input {
+      width: 1.75rem;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    .page {
+      width: 1.75rem;
+      height: 1rem;
+      padding: 0.2rem;
+      margin: 0.1rem;
+      font-size: 1.1rem;
+      border-radius: 3px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    button {
+      width: 8rem;
+      height: 1.4rem;
+      margin-left: 0.5rem;
+      font-weight: 500;
+      background-color: rgb(115, 204, 115);
+      border: none;
+      border-radius: 3px;
+    }
+  </style>
+  <script>
+    let pageArr = []; //pages to be loaded
+    let loadArr = []; //loading times
+    let memArr = []; //pages in mem at instant
+
+    let outputArr = [];
+    let indexArray = [];
+
+    window.addEventListener("load", () => {
+      let value = "97941364673141446744";
+      for (let i = 0; i < 20; i++) {
+        let cur = document.getElementById(`p-${i}`);
+        cur.value = value[i];
+        cur.addEventListener("focus", () => (cur.value = ""));
+        cur.addEventListener("input", () => {
+          if (i !== 19) document.getElementById(`p-${(i + 1) % 20}`).focus();
+        });
+      }
+    });
+
+    function showpages() {
+      pageArr = [];
+      loadArr = [];
+      memArr = [];
+      pageNum = 0;
+      outputArr = [];
+
+      document
+        .querySelectorAll(".page-input")
+        .forEach((page) => pageArr.push(+page.value));
+
+      let temp = [];
+      for (let i = 1; i <= 4; i++) {
+        let load = +document.getElementById(`l${i}`).value;
+        let page = +document.getElementById(`p${i}`).value;
+        temp.push({ load: load, page: page, index: i });
+      }
+
+      temp.sort((a, b) => a.load - b.load);
+      memArr = temp.map((obj) => obj.page);
+      indexArray = temp.map((obj) => obj.index);
+    }
+
+    function loop(PRA, postFunc = () => {}) {
+      showpages();
+      postFunc();
+      pageArr.forEach((page, i) => outputArr.push(PRA(page, i)));
+      let divs = document.querySelectorAll(".page");
+      let sorted = [];
+      indexArray.forEach((index, i) => {
+        sorted[index - 1] = Array.from(divs).slice(i * 20, (i + 1) * 20);
+      });
+      divs = [...sorted[3], ...sorted[2], ...sorted[1], ...sorted[0]];
+      indexArray.forEach((index, i) => {
+        outputArr.forEach((page, j) => {
+          divs[i * 20 + j].style.backgroundColor = "rgba(255, 255, 255, 0.4)";
+          divs[page.spot * 20 + j].style.backgroundColor = page.color;
+          divs[i * 20 + j].innerHTML = page.memory[i];
+        });
+      });
+    }
+
+    function FIFO() {
+      let memPos = 0;
+      loop((page) => {
+        let color = "green";
+        let spot;
+        if ((spot = memArr.indexOf(page)) === -1) {
+          memArr[(spot = memPos++ % 4)] = page;
+          color = "red";
+        }
+        return { memory: [...memArr], spot: spot, color: color };
+      });
+    }
+
+    function LRU() {
+      let lruStack;
+      loop(
+        (page) => {
+          let index = 0;
+          let color = "red";
+          let spot;
+          if ((spot = memArr.indexOf(page)) === -1) {
+            memArr[(spot = memArr.indexOf(lruStack[0]))] = page;
+          } else {
+            index = lruStack.indexOf(page);
+            color = "green";
+          }
+
+          lruStack.splice(index, 1);
+          lruStack.push(page);
+          return {
+            memory: [...memArr],
+            spot: spot,
+            color: color,
+          };
+        },
+        () => (lruStack = [...memArr])
+      );
+    }
+
+    function optimal() {
+      loop((page, i) => {
+        let color = "green";
+        let spot;
+        if ((spot = memArr.indexOf(page)) === -1) {
+          color = "red";
+          let testArr = [...memArr];
+          for (let j = i + 1; j < pageArr.length; j++) {
+            if (
+              (testArr = testArr.filter((t) => t != pageArr[j])).length === 1
+            ) {
+              memArr[(spot = memArr.indexOf(testArr[0]))] = page;
+              break;
+            }
+          }
+        }
+        return {
+          memory: [...memArr],
+          spot: spot,
+          color: color,
+        };
+      });
+    }
+
+    function clock() {
+      let withR;
+      let j = 0;
+      loop(
+        (page) => {
+          let color = "red";
+          let spot;
+          if (!withR.find((mem, i) => mem.page === page)) {
+            while (true) {
+              if (withR[j % 4].r === 0) break;
+              else withR[j++ % 4].r = 0;
+            }
+            withR[(spot = j++ % 4)] = { page: page, r: 1 };
+          } else {
+            color = "green";
+            let newIndex = withR.map((mem) => mem.page).indexOf(page);
+            spot = newIndex;
+            withR[newIndex].r = 1;
+          }
+
+          return {
+            memory: withR.map((mem) => `${mem.page}${mem.r ? "r" : ""}`),
+            spot: spot,
+            color: color,
+          };
+        },
+        () => (withR = memArr.map((mem) => ({ page: mem, r: 1 })))
+      );
+    }
+
+    function secondChance() {
+      clock();
+    }
+  </script>
+</html>
